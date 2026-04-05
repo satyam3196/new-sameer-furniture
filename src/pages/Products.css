@@ -1,0 +1,123 @@
+/* ===== PAGE HEADER ===== */
+.page-header {
+  background: linear-gradient(135deg, #1a1207 0%, #2c1e0e 100%);
+  padding: 10rem 0 4rem;
+  text-align: center;
+}
+
+.page-header h1 {
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 4vw, 3rem);
+  color: #fff;
+  margin-bottom: 0.75rem;
+}
+
+.page-header p {
+  color: #b3a898;
+  font-size: 1.1rem;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+/* ===== PRODUCT SECTIONS ===== */
+.products-section {
+  padding: 5rem 0;
+}
+
+.products-section--accent {
+  background: var(--color-cream);
+}
+
+.products__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+
+/* ===== PRODUCT CARD ===== */
+.product-card {
+  background: #fff;
+  border: 1px solid var(--color-border);
+  border-radius: 16px;
+  padding: 2rem 1.5rem;
+  transition: all 0.35s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.07);
+  border-color: var(--color-accent);
+}
+
+.product-card__icon {
+  width: 70px;
+  height: 70px;
+  border-radius: 16px;
+  background: var(--color-cream);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-accent);
+  margin-bottom: 1.2rem;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.products-section--accent .product-card__icon {
+  background: #fff;
+}
+
+.product-card:hover .product-card__icon {
+  background: var(--color-accent);
+  color: #fff;
+}
+
+.product-card h3 {
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  color: var(--color-primary);
+  margin-bottom: 0.5rem;
+}
+
+.product-card p {
+  font-size: 0.92rem;
+  color: var(--color-text-light);
+  line-height: 1.65;
+  margin-bottom: 1rem;
+}
+
+.product-card__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.product-card__tags li {
+  background: var(--color-cream);
+  color: var(--color-text);
+  font-size: 0.78rem;
+  font-weight: 500;
+  padding: 0.3rem 0.7rem;
+  border-radius: 100px;
+  border: 1px solid var(--color-border);
+}
+
+.products-section--accent .product-card__tags li {
+  background: #fff;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1024px) {
+  .products__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .products__grid {
+    grid-template-columns: 1fr;
+  }
+}
